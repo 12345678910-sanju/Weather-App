@@ -1,4 +1,4 @@
-const apiKey = '9a75488128c0d747df69f539add4855f';
+const apiKey = 'API_KEY_HERE';
 
 function autocomplete(inp, arr) {
     let currentFocus;
@@ -30,7 +30,7 @@ function autocomplete(inp, arr) {
     }
 }
 
-function getWeather() {
+function getWeatherDetails() {
     const location = document.getElementById('locationInput').value.trim();
 
     if (!location) {
@@ -69,7 +69,7 @@ function displayWeather(data) {
 document.getElementById('locationInput').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         event.preventDefault(); 
-        getWeather();
+        getWeatherDetails();
     }
 });
 
